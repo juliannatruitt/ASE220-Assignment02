@@ -2,7 +2,7 @@ var pets = [
     {
         name: "Baxter",
         type: "Dog",
-        image: "",
+        image: "images/beagle.jpg",
         breed: "Beagle",
         sex: "Male",
         color: "Tri-color (Black, Brown, White)",
@@ -24,7 +24,7 @@ var pets = [
     {
         name: "Luna",
         type: "Cat",
-        image: "",
+        image: "images/maine_coon.jpg",
         breed: "Maine Coon",
         sex: "Female",
         color: "Grey with white markings",
@@ -47,7 +47,7 @@ var pets = [
     {
         name: "Sandy",
         type: "Dog",
-        image: "",
+        image: "images/golden_retriever.jpg",
         breed: "Golden Retriever",
         sex: "Female",
         color: "Golden",
@@ -70,7 +70,7 @@ var pets = [
     {
         name: "Oliver",
         type: "Cat",
-        image: "",
+        image: "images/siamese.jpg",
         breed: "Siamese",
         sex: "Male",
         color: "Seal Point",
@@ -93,7 +93,7 @@ var pets = [
     {
         name: "Max",
         type: "Dog",
-        image: "",
+        image: "images/labrador_retriever.jpg",
         breed: "Labrador Retriever",
         sex: "Male",
         color: "Chocolate",
@@ -117,7 +117,7 @@ var pets = [
     {
         name: "Daisy",
         type: "Cat",
-        image: "",
+        image: "images/persian.jpg",
         breed: "Persian",
         sex: "Female",
         color: "White",
@@ -140,7 +140,7 @@ var pets = [
     {
         name: "Charlie",
         type: "Dog",
-        image: "",
+        image: "images/dachshund.jpg",
         breed: "Dachshund",
         sex: "Male",
         color: "Dapple (Black and Gray)",
@@ -163,7 +163,7 @@ var pets = [
     {
         name: "George",
         type: "Cat",
-        image: "",
+        image: "images/british_shorthair.jpg",
         breed: "British Shorthair",
         sex: "Male",
         color: "Blue (Gray)",
@@ -188,7 +188,7 @@ var pets = [
     {
         name: "Bella",
         type: "Dog",
-        image: "",
+        image: "images/boxer.jpg",
         breed: "Boxer",
         sex: "Female",
         color: "Fawn with white markings",
@@ -211,7 +211,7 @@ var pets = [
     {
         name: "Sohpie",
         type: "Cat",
-        image: "",
+        image: "images/ragdoll.jpg",
         breed: "Ragdoll",
         sex: "Female",
         color: "Seal point with blue eyes",
