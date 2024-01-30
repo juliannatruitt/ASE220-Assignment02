@@ -57,8 +57,52 @@ async function pet_details() {
         
        for (let i=0; i < pets.length; i++){
         let htmlSegment = `
-            <`
+            <dt class="col-sm-3">Type:</dt>
+            <dd class="col-sm-9">Dog</dd>
+          
+            <dt class="col-sm-3">Breed:</dt>
+            <dd class="col-sm-9">Beagle</dd>
+          
+            <dt class="col-sm-3">Sex:</dt>
+            <dd class="col-sm-9">Male</dd>
+          
+            <dt class="col-sm-3">Color:</dt>
+            <dd class="col-sm-9">Tri-color (Black, Brown, White)</dd>
+          
+            <dt class="col-sm-3">Spayed / Neutered:</dt>
+            <dd class="col-sm-9">Yes</dd>
+
+            <dt class="col-sm-3">Age:</dt>
+            <dd class="col-sm-9">5 Years</dd>
+
+            <dt class="col-sm-3">Animal ID:</dt>
+            <dd class="col-sm-9">34621</dd>
+
+            <dt class="col-sm-3">Microchip Number:</dt>
+            <dd class="col-sm-9">982000364789210</dd>
+
+            <dt class="col-sm-3">Status:</dt>
+            <dd class="col-sm-9">
+              <ul><li>Health checked.</li></ul>
+              <ul><li>Vaccinations up to date.</li></ul>
+              <ul><li>Regularly dewormed.</li></ul>
+              <ul><li>Microchipped.</li></ul>
+            </dd>
+
+            <dt class="col-sm-3">A Little Bit About Me:</dt>
+            <dd class="col-sm-9">
+            ${pets[i].about_me}
+            </dd>`;
+            html += htmlSegment;
+       };
+       document.getElementById("pet_box").innerHTML = html;
+    } catch (error) {
+        console.error("Error while processing pet data:", error);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     pet_card() });
+
+document.addEventListener("DOMContentLoaded", function() {
+    pet_details() });
