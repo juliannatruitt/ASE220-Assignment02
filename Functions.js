@@ -9,7 +9,7 @@ async function load_file(url) {
 }
 
 const file_url = "data.js";
-const file_content = await load_file(file_url);
+const file_content = load_file(file_url);
 
 async function pet_card(pets) {
     for(let i=0;i<pets.length;i++){
@@ -19,9 +19,12 @@ async function pet_card(pets) {
         const results = JSON.parse(await load_file(file_url));
         console.log(results);
 
+async function pet_card() {
+    try {
+        
         let html = '';
 
-        results.forEach(pet => {
+        pets.forEach(pet => {
             let htmlSegment = `
                 <div class="col-lg-4 col-sm-12">
                     <div class="card" style="width: 18rem;">
@@ -41,6 +44,5 @@ async function pet_card(pets) {
     }*/
 }
 
-document.addEventListener("DOMContentLoaded, function() {
-    pet_card();
-});
+document.addEventListener("DOMContentLoaded", function() {
+    pet_card() });
