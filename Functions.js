@@ -50,5 +50,15 @@ async function pet_card() {
     }
 }
 
+async function pet_details() {
+    try {
+        
+        let html = '';
+        
+       for (let i=0; i < pets.length; i++){
+        let htmlSegment = `
+            <`
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     pet_card() });

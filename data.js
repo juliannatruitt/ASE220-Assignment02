@@ -209,7 +209,7 @@ let pets = [
         
     },
     {
-        name: "Sohpie",
+        name: "Sophie",
         type: "Cat",
         image: "images/ragdoll.jpg",
         breed: "Ragdoll",
