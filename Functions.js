@@ -56,38 +56,41 @@ async function pet_details() {
         let html = '';
         
        for (let i=0; i < pets.length; i++){
-        let htmlSegment = `
+        let htmlSegment = `<div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <img src="${pets[i].image}" class="card-img-top" alt="Image of a ${pets[i].breed} ${pets[i].type} on the grass">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <dl class="row" id="pet_box">
+          </dl>
+        </div>
+            </div>
             <dt class="col-sm-3">Type:</dt>
-            <dd class="col-sm-9">Dog</dd>
+            <dd class="col-sm-9">${pets[i].type}</dd>
           
             <dt class="col-sm-3">Breed:</dt>
-            <dd class="col-sm-9">Beagle</dd>
+            <dd class="col-sm-9">${pets[i].breed}</dd>
           
             <dt class="col-sm-3">Sex:</dt>
-            <dd class="col-sm-9">Male</dd>
+            <dd class="col-sm-9">${pets[i].sex}</dd>
           
             <dt class="col-sm-3">Color:</dt>
-            <dd class="col-sm-9">Tri-color (Black, Brown, White)</dd>
+            <dd class="col-sm-9">${pets[i].color}</dd>
           
             <dt class="col-sm-3">Spayed / Neutered:</dt>
-            <dd class="col-sm-9">Yes</dd>
+            <dd class="col-sm-9">${pets[i].fixed}</dd>
 
             <dt class="col-sm-3">Age:</dt>
-            <dd class="col-sm-9">5 Years</dd>
+            <dd class="col-sm-9">${pets[i].age}</dd>
 
             <dt class="col-sm-3">Animal ID:</dt>
-            <dd class="col-sm-9">34621</dd>
+            <dd class="col-sm-9">${pets[i].animal_id}</dd>
 
             <dt class="col-sm-3">Microchip Number:</dt>
-            <dd class="col-sm-9">982000364789210</dd>
+            <dd class="col-sm-9">${pets[i].microchip_num}</dd>
 
             <dt class="col-sm-3">Status:</dt>
-            <dd class="col-sm-9">
-              <ul><li>Health checked.</li></ul>
-              <ul><li>Vaccinations up to date.</li></ul>
-              <ul><li>Regularly dewormed.</li></ul>
-              <ul><li>Microchipped.</li></ul>
-            </dd>
+            <dd class="col-sm-9">${pets[i].status}</dd>
 
             <dt class="col-sm-3">A Little Bit About Me:</dt>
             <dd class="col-sm-9">
@@ -95,7 +98,7 @@ async function pet_details() {
             </dd>`;
             html += htmlSegment;
        };
-       document.getElementById("pet_box").innerHTML = html;
+       document.getElementById("pet_details_container").innerHTML = html;
     } catch (error) {
         console.error("Error while processing pet data:", error);
     }
