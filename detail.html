@@ -14,16 +14,6 @@
   <h1 style="float: none; position: relative; text-align: center; color: black;">
     About Me!
   </h1>
-  <script>
-    let index=getQueryParam('index');
-    if(index===null) window.location.href='index.html';
-    else document.getElementsByClassName('col-lg-6 col-sm-12').innerHTML=index;
-  
-  function getQueryParam(key){
-    let queryParams=new URLSearchParams(window.location.search);
-    return queryParams.has(key) ? queryParams.get(key) : null;
-  }
-  </script>
   <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-12">
