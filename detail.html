@@ -17,7 +17,7 @@
   <script>
     let index=getQueryParam('index');
     if(index===null) window.location.href='index.html';
-    else document.getElementById('content').innerHTML=index;
+    else document.getElementsByClassName('col-lg-6 col-sm-12').innerHTML=index;
   
   function getQueryParam(key){
     let queryParams=new URLSearchParams(window.location.search);
