@@ -2,7 +2,7 @@
 
 ### Contributors:
 - Julianna Truitt 
-    - I worked on creating the index.html page, making it responsive, and added the card template from bootstrap.
+    - I worked on creating the array and helping members out when needed.
 - Isha Nepal
     I worked on the creating the details.html page, added the icons for gender and ages from bootstrap and adding the details of the pets on the cards.
 - Garrett Kinder
