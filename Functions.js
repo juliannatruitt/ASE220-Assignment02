@@ -11,6 +11,14 @@ async function load_file(url) {
 const file_url = "data.js";
 const file_content = load_file(file_url);
 
+async function pet_card(pets) {
+    for(let i=0;i<pets.length;i++){
+        console.log(pets[i].text+" - "+pets[i].name);
+    }
+    /*try {
+        const results = JSON.parse(await load_file(file_url));
+        console.log(results);
+
 async function pet_card() {
     try {
         
@@ -33,7 +41,7 @@ async function pet_card() {
         document.getElementById("pet_container").innerHTML = html;
     } catch (error) {
         console.error("Error while processing pet data:", error);
-    }
+    }*/
 }
 
 document.addEventListener("DOMContentLoaded", function() {
