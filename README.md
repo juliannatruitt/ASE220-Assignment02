@@ -2,7 +2,7 @@
 
 ### Contributors:
 - Julianna Truitt 
-    - I worked on creating the index.html page, making it responsive, and added the card template from bootstrap.
+    - Did the bootstrap modal. Make a function for it on the functions.js and made cooresponding event listseners on the index.html page.
 - Isha Nepal
     I worked on the creating the details.html page, added the icons for gender and ages from bootstrap and adding the details of the pets on the cards.
 - Garrett Kinder
