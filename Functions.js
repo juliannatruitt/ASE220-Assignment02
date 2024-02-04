@@ -118,6 +118,7 @@ function showModal(pet_index){
                 <ul>
                     <li><p class="card-text">${pets[pet_index].name}, a ${pets[pet_index].breed} ${pets[pet_index].type}. ${pets[pet_index].age} years old with 
                     ${pets[pet_index].color} fur.</p></li>
+                    <li><p>Sex: ${pets[pet_index].sex}</p></li>
                     <li><p>Spayed/Neutered: ${pets[pet_index].fixed}</p></li>
                     <li><p>Status: ${pets[pet_index].status}, </p></li>
         
