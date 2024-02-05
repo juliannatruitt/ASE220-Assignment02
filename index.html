@@ -31,13 +31,10 @@
             if (card) {
                 const petIndex = card.parentElement.dataset.index;
                 showModal(petIndex);
+				var myModal = new bootstrap.Modal(document.getElementById('modal'))
+				myModal.show();
             }
         });
-
-		document.getElementById('pet_container').addEventListener('click',function(){
-		var myModal = new bootstrap.Modal(document.getElementById('modal'))
-			myModal.show();
-			});
 
 		document.getElementById('closeModal').addEventListener('click',function(){
 			var myModal = new bootstrap.Modal(document.getElementById('modal'))
