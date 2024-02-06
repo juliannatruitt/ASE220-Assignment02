@@ -22,6 +22,32 @@
 	</div>
 	<div id="morepets" class="morepets">
 	</div>
+	<div id="modal" class="modal" tabindex="-1">
+		<div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pet_name"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal_body">
+                <ul>
+					<li id="description_pet"></p></p></li>
+                    <li id="pet_sex"><p></p></li>
+                    <li id="spayed_or_neutered_pet"><p></p></li>
+                    <li id="status_pet"><p></p></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">
+                    <a href="detail.html?id=${pet_index}" style="color: white; text-decoration: none;">
+                        More information
+                    </a>
+                </button>
+                <button id="closeModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+	</div>
 	<script src="Functions.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
@@ -36,13 +62,13 @@
 				myModal.show();
             }
         });
-/*
+
 		document.getElementById('closeModal').addEventListener('click', function(){
 			var myModal = new bootstrap.Modal(document.getElementById('modal'))
 				myModal.hide();
 
 		});
-*/
+
 		let more_pets = document.createElement('button');
 		more_pets.classList.add('btn');
 		more_pets.classList.add('btn-primary');
