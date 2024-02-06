@@ -116,6 +116,7 @@ function showModal(pet_index){
                                                             ${pets[pet_index].age} years old with ${pets[pet_index].color} fur.`;
     document.getElementById("pet_sex").innerHTML = `Sex: ${pets[pet_index].sex}`;
     document.getElementById("spayed_or_neutered_pet").innerHTML = `Spayed/Neutered: ${pets[pet_index].fixed}`;
-    document.getElementById("status_pet").innerHTML = `${pets[pet_index].status},`;
+    document.getElementById("status_pet").innerHTML = `Satus: ${pets[pet_index].status},`;
+    document.getElementById("go_to_details_page").href = `detail.html?id=${pet_index}`;
 }
 
