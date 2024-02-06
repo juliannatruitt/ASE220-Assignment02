@@ -111,35 +111,12 @@ function pet_details(id) {
 }
 
 function showModal(pet_index){
-    let info = 
-    `
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">${pets[pet_index].name}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <ul>
-                    <li><p class="card-text">${pets[pet_index].name}, a ${pets[pet_index].breed} ${pets[pet_index].type}. ${pets[pet_index].age} years old with 
-                    ${pets[pet_index].color} fur.</p></li>
-                    <li><p>Sex: ${pets[pet_index].sex}</p></li>
-                    <li><p>Spayed/Neutered: ${pets[pet_index].fixed}</p></li>
-                    <li><p>Status: ${pets[pet_index].status}, </p></li>
-        
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary">
-                    <a href="detail.html?id=${pet_index}" style="color: white; text-decoration: none;">
-                        More information
-                    </a>
-                </button>
-                <button id="closeModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-            </div>
-        </div>
-    `;
-    document.getElementById('modal').innerHTML = info;
+    document.getElementById("pet_name").innerHTML = pets[pet_index].name
+    document.getElementById("description_pet").innerHTML = `${pets[pet_index].name}, a ${pets[pet_index].breed} ${pets[pet_index].type}. 
+                                                            ${pets[pet_index].age} years old with ${pets[pet_index].color} fur.`;
+    document.getElementById("pet_sex").innerHTML = `Sex: ${pets[pet_index].sex}`;
+    document.getElementById("spayed_or_neutered_pet").innerHTML = `Spayed/Neutered: ${pets[pet_index].fixed}`;
+    document.getElementById("status_pet").innerHTML = `Satus: ${pets[pet_index].status},`;
+    document.getElementById("go_to_details_page").href = `detail.html?id=${pet_index}`;
 }
 
