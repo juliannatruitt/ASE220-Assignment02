@@ -9,15 +9,11 @@ async function load_file(url) {
 }
 
 const file_url = "data.js";
-//onst file_content = load_file(file_url);
 
 async function pet_card() {
     try {
-        
         let html = '';
-        
-       for (let i=0; i < pets.length; i++){
-
+        for (let i=offset; i < Math.min(offset+rpp, pets.length); i++){
             let age = block_number_icons[pets[i].age]
             let sex = '';
             if (pets[i].sex == "Male"){
@@ -47,6 +43,15 @@ async function pet_card() {
     } catch (error) {
         console.error("Error while processing pet data:", error);
     }
+    if (offset+rpp > pets.length) more_pets.hidden = true;
+}
+
+function createButton(text, classList, clickHandler, appendTo) {
+    let button = document.createElement('button');
+    button.classList.add(...classList);
+    button.innerText = text;
+    button.addEventListener('click', clickHandler);
+    appendTo.append(button);
 }
 
 function getQueryParam(key){

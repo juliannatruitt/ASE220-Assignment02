@@ -1,3 +1,5 @@
+var offset = 0;
+var rpp = 9;
 let pets = [
     {
         name: "Baxter",
