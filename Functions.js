@@ -114,9 +114,9 @@ function showModal(pet_index){
     document.getElementById("pet_name").innerHTML = pets[pet_index].name
     document.getElementById("description_pet").innerHTML = `${pets[pet_index].name}, a ${pets[pet_index].breed} ${pets[pet_index].type}. 
                                                             ${pets[pet_index].age} years old with ${pets[pet_index].color} fur.`;
-    document.getElementById("pet_sex").innerHTML = `Sex: ${pets[pet_index].sex}`;
-    document.getElementById("spayed_or_neutered_pet").innerHTML = `Spayed/Neutered: ${pets[pet_index].fixed}`;
-    document.getElementById("status_pet").innerHTML = `Satus: ${pets[pet_index].status},`;
+    document.getElementById("pet_sex").innerHTML = `<span class="label">Sex</span>: ${pets[pet_index].sex}`;
+    document.getElementById("spayed_or_neutered_pet").innerHTML = `<span class="label">Spayed/Neutered</span>: ${pets[pet_index].fixed}`;
+    document.getElementById("status_pet").innerHTML = `<span class="label">Satus</span>: ${pets[pet_index].status},`;
     document.getElementById("go_to_details_page").href = `detail.html?id=${pet_index}`;
 }
 
