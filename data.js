@@ -24,49 +24,46 @@ let pets = [
                 can share his endless affection and playful spirit.`
     },
     {
-        name: "Luna",
-        type: "Cat",
-        image: "images/maine_coon.jpg",
-        breed: "Maine Coon",
-        sex: "Female",
-        color: "Grey with white markings",
+        name: "Teddy",
+        type: "Dog",
+        image: "images/poodle_teddy.jpg",
+        breed: "Poodle",
+        sex: "Male",
+        color: "Apricot",
         fixed: "Yes",
-        age: 3,
-        animal_id: 57281,
-        microchip_num: 981120019776432,
+        age: 2,
+        animal_id: 70491,
+        microchip_num: 982000395678945,
         status:
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Luna is a majestic Maine Coon with a fluffy grey coat and striking white markings.
-                She was found as a stray and has since become a gentle and affectionate
-                companion. Luna enjoys perching on windowsills, watching birds, and being the
-                center of attention. She's a bit shy at first but warms up quickly, especially if you
-                have treats! Luna would thrive in a calm environment where she can relax and be
-                pampered like the queen she is.`
-        
+        about_me: `Say hi to Teddy, a charming Apricot Poodle with a curly coat and an endearing personality. Teddy is 
+                playful and affectionate, always ready for a game of fetch or a long walk in the park. He's intelligent and easy 
+                to train, making him a joy to have around. Teddy thrives on companionship and would do best in a home where he 
+                receives plenty of attention and interaction. With his lovable nature, Teddy is sure to bring endless joy to his 
+                new family.`
     },
     {
-        name: "Sandy",
+        name: "Rosie",
         type: "Dog",
-        image: "images/golden_retriever.jpg",
-        breed: "Golden Retriever",
+        image: "images/cocker_spaniel_rosie.webp",
+        breed: "Cocker Spaniel",
         sex: "Female",
         color: "Golden",
         fixed: "Yes",
-        age: 7,
-        animal_id: 41382,
-        microchip_num: 985112004567890,
+        age: 3,
+        animal_id: 84756,
+        microchip_num: 982000423456789,
         status:
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Sandy is a heartwarming Golden Retriever with a golden coat as bright as her
-                personality. Rescued from a neglectful situation, she has shown incredible
-                resilience and love for life. Sandy is great with children and other pets, making
-                her an ideal family dog. She enjoys outdoor adventures, especially swimming and
-                fetching. Sandy is looking for a forever home where she can spread her joy and
-                love.`
+        about_me: `Meet Rosie, a charming Cocker Spaniel with a beautiful golden coat and soulful eyes. 
+                Rosie is as sweet as can be, with a gentle and affectionate nature. She loves 
+                cuddling with her humans and enjoys leisurely walks in the park. Rosie is also 
+                great with children and other pets, making her an ideal family companion. She's 
+                looking for a loving home where she can shower her new family with love and affection.`
         
     },
     {
@@ -278,25 +275,27 @@ let pets = [
 
     },
     {
-        name: "Teddy",
-        type: "Dog",
-        image: "images/poodle_teddy.jpg",
-        breed: "Poodle",
-        sex: "Male",
-        color: "Apricot",
+        name: "Luna",
+        type: "Cat",
+        image: "images/maine_coon.jpg",
+        breed: "Maine Coon",
+        sex: "Female",
+        color: "Grey with white markings",
         fixed: "Yes",
-        age: 2,
-        animal_id: 70491,
-        microchip_num: 982000395678945,
+        age: 3,
+        animal_id: 57281,
+        microchip_num: 981120019776432,
         status:
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Say hi to Teddy, a charming Apricot Poodle with a curly coat and an endearing personality. Teddy is 
-                playful and affectionate, always ready for a game of fetch or a long walk in the park. He's intelligent and easy 
-                to train, making him a joy to have around. Teddy thrives on companionship and would do best in a home where he 
-                receives plenty of attention and interaction. With his lovable nature, Teddy is sure to bring endless joy to his 
-                new family.`
+        about_me: `Luna is a majestic Maine Coon with a fluffy grey coat and striking white markings.
+                She was found as a stray and has since become a gentle and affectionate
+                companion. Luna enjoys perching on windowsills, watching birds, and being the
+                center of attention. She's a bit shy at first but warms up quickly, especially if you
+                have treats! Luna would thrive in a calm environment where she can relax and be
+                pampered like the queen she is.`
+        
     },
     {
         name: "Simba",
@@ -409,25 +408,26 @@ let pets = [
         
     },
     {
-        name: "Rosie",
+        name: "Sandy",
         type: "Dog",
-        image: "images/cocker_spaniel_rosie.webp",
-        breed: "Cocker Spaniel",
+        image: "images/golden_retriever.jpg",
+        breed: "Golden Retriever",
         sex: "Female",
         color: "Golden",
         fixed: "Yes",
-        age: 3,
-        animal_id: 84756,
-        microchip_num: 982000423456789,
+        age: 7,
+        animal_id: 41382,
+        microchip_num: 985112004567890,
         status:
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Meet Rosie, a charming Cocker Spaniel with a beautiful golden coat and soulful eyes. 
-                Rosie is as sweet as can be, with a gentle and affectionate nature. She loves 
-                cuddling with her humans and enjoys leisurely walks in the park. Rosie is also 
-                great with children and other pets, making her an ideal family companion. She's 
-                looking for a loving home where she can shower her new family with love and affection.`
+        about_me: `Sandy is a heartwarming Golden Retriever with a golden coat as bright as her
+                personality. Rescued from a neglectful situation, she has shown incredible
+                resilience and love for life. Sandy is great with children and other pets, making
+                her an ideal family dog. She enjoys outdoor adventures, especially swimming and
+                fetching. Sandy is looking for a forever home where she can spread her joy and
+                love.`
         
     },
     {
@@ -499,114 +499,25 @@ let pets = [
         
     },
     {
-        name: "Cassie",
-        type: "Dog",
-        image: "images/cavalier_king_charles_spaniel_cassie.jpg",
-        breed: "Cavalier King Charles Spaniel",
+        name: "Cleo",
+        type: "Cat",
+        image: "images/calico_cleo.jpg",
+        breed: "Calico",
         sex: "Female",
-        color: "Blenheim",
-        fixed: "Yes",
-        age: 2,
-        animal_id: 79823,
-        microchip_num: 982000445678901,
-        status:
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
-            ],
-        about_me: `Say hello to Cassie, a sweet Cavalier King Charles Spaniel with a beautiful blenheim 
-                coat. Cassie is known for her affectionate and gentle nature. She loves cuddling with 
-                her humans and enjoys being carried around like a baby. Cassie is also great with 
-                children and other pets, making her an ideal family companion. She's looking for a 
-                loving home where she can receive plenty of attention and affection from her new family.`
-        
-    },
-    {
-        name: "Buddy",
-        type: "Dog",
-        image: "images/goldendoodle_buddy.jpg",
-        breed: "Goldendoodle",
-        sex: "Male",
-        color: "Apricot",
-        fixed: "Yes",
-        age: 2,
-        animal_id: 67324,
-        microchip_num: 982000364789219,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Buddy is an adorable Goldendoodle with a fluffy apricot-colored coat and a playful 
-                personality. He's a social butterfly who loves everyone he meets, including other 
-                pets. Buddy is always up for an adventure and enjoys outdoor activities like hiking 
-                and playing fetch. He's also a great cuddle buddy and loves nothing more than snuggling 
-                up with his humans on the couch. Buddy would make a wonderful addition to any loving family.`
-
-    },
-    {
-        name: "Rosie",
-        type: "Dog",
-        image: "images/german_shepherd_rosie.jpg",
-        breed: "German Shepherd",
-        sex: "Female",
-        color: "Black",
+        color: "Calico",
         fixed: "Yes",
         age: 4,
-        animal_id: 93421,
-        microchip_num: 982000364789217,
+        animal_id: 87459,
+        microchip_num: 982000364789224,
         status: 
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
             ],
-        about_me: `Rosie is a loyal German Shepherd with a stunning black coat and soulful brown eyes. She's 
-                a gentle giant who adores her family and is fiercely protective of them. Rosie is intelligent 
-                and easily trainable, excelling in obedience and agility tasks. She loves outdoor adventures 
-                like hiking and camping but is just as happy lounging at home with her humans. Rosie is great 
-                with children and would make a devoted companion for an active family.`
-
-    },
-    {
-        name: "Milo",
-        type: "Cat",
-        image: "images/siberian_milo.jpg",
-        breed: "Siberian",
-        sex: "Male",
-        color: "Red Tabby",
-        fixed: "Yes",
-        age: 2,
-        animal_id: 86432,
-        microchip_num: 982000364789216,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Milo is a playful Siberian cat with a striking red tabby coat and vibrant green eyes. 
-                He was found abandoned but has quickly adapted to life with humans. Milo is curious and 
-                enjoys exploring every nook and cranny of his home. He's also affectionate and loves to 
-                cuddle up with his humans at the end of the day. Milo gets along well with other pets 
-                and would make a wonderful addition to any loving family.`
-
-    },
-    {
-        name: "Rocky",
-        type: "Dog",
-        image: "images/rottweiler_rocky.jpg",
-        breed: "Rottweiler",
-        sex: "Male",
-        color: "Black and Tan",
-        fixed: "Yes",
-        age: 3,
-        animal_id: 73254,
-        microchip_num: 982000364789215,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Rocky is a handsome Rottweiler with a strong build and a heart of gold. He was rescued 
-                from a neglectful situation and has since become a loyal and loving companion. Rocky is 
-                intelligent and eager to please, making him a joy to train. He enjoys outdoor activities 
-                like hiking and running, but he's also content to lounge at home with his family. Rocky is 
-                great with children and would thrive in an active household where he can receive plenty of 
-                love and attention.`
+        about_me: `Cleo is a beautiful Calico cat with a vibrant coat of orange, black, and white. She's 
+                a gentle and affectionate feline who enjoys lounging in sunny spots and birdwatching from 
+                the windowsill. Cleo is also playful and enjoys chasing toys and exploring her surroundings. 
+                She gets along well with other pets and would make a wonderful companion for any cat lover. 
+                Cleo is looking for a loving home where she can receive all the attention she deserves.`
 
     },
     {
@@ -655,6 +566,95 @@ let pets = [
 
     },
     {
+        name: "Milo",
+        type: "Cat",
+        image: "images/siberian_milo.jpg",
+        breed: "Siberian",
+        sex: "Male",
+        color: "Red Tabby",
+        fixed: "Yes",
+        age: 2,
+        animal_id: 86432,
+        microchip_num: 982000364789216,
+        status: 
+            [
+                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
+            ],
+        about_me: `Milo is a playful Siberian cat with a striking red tabby coat and vibrant green eyes. 
+                He was found abandoned but has quickly adapted to life with humans. Milo is curious and 
+                enjoys exploring every nook and cranny of his home. He's also affectionate and loves to 
+                cuddle up with his humans at the end of the day. Milo gets along well with other pets 
+                and would make a wonderful addition to any loving family.`
+
+    },
+    {
+        name: "Rocky",
+        type: "Dog",
+        image: "images/rottweiler_rocky.jpg",
+        breed: "Rottweiler",
+        sex: "Male",
+        color: "Black and Tan",
+        fixed: "Yes",
+        age: 3,
+        animal_id: 73254,
+        microchip_num: 982000364789215,
+        status: 
+            [
+                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
+            ],
+        about_me: `Rocky is a handsome Rottweiler with a strong build and a heart of gold. He was rescued 
+                from a neglectful situation and has since become a loyal and loving companion. Rocky is 
+                intelligent and eager to please, making him a joy to train. He enjoys outdoor activities 
+                like hiking and running, but he's also content to lounge at home with his family. Rocky is 
+                great with children and would thrive in an active household where he can receive plenty of 
+                love and attention.`
+
+    },
+    {
+        name: "Buddy",
+        type: "Dog",
+        image: "images/goldendoodle_buddy.jpg",
+        breed: "Goldendoodle",
+        sex: "Male",
+        color: "Apricot",
+        fixed: "Yes",
+        age: 2,
+        animal_id: 67324,
+        microchip_num: 982000364789219,
+        status: 
+            [
+                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
+            ],
+        about_me: `Buddy is an adorable Goldendoodle with a fluffy apricot-colored coat and a playful 
+                personality. He's a social butterfly who loves everyone he meets, including other 
+                pets. Buddy is always up for an adventure and enjoys outdoor activities like hiking 
+                and playing fetch. He's also a great cuddle buddy and loves nothing more than snuggling 
+                up with his humans on the couch. Buddy would make a wonderful addition to any loving family.`
+
+    },
+    {
+        name: "Rosie",
+        type: "Dog",
+        image: "images/german_shepherd_rosie.jpg",
+        breed: "German Shepherd",
+        sex: "Female",
+        color: "Black",
+        fixed: "Yes",
+        age: 4,
+        animal_id: 93421,
+        microchip_num: 982000364789217,
+        status: 
+            [
+                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
+            ],
+        about_me: `Rosie is a loyal German Shepherd with a stunning black coat and soulful brown eyes. She's 
+                a gentle giant who adores her family and is fiercely protective of them. Rosie is intelligent 
+                and easily trainable, excelling in obedience and agility tasks. She loves outdoor adventures 
+                like hiking and camping but is just as happy lounging at home with her humans. Rosie is great 
+                with children and would make a devoted companion for an active family.`
+
+    },
+    {
         name: "Apollo",
         type: "Dog",
         image: "images/siberian_husky_apollo.jpg",
@@ -677,26 +677,26 @@ let pets = [
 
     },
     {
-        name: "Cleo",
-        type: "Cat",
-        image: "images/calico_cleo.jpg",
-        breed: "Calico",
+        name: "Cassie",
+        type: "Dog",
+        image: "images/cavalier_king_charles_spaniel_cassie.jpg",
+        breed: "Cavalier King Charles Spaniel",
         sex: "Female",
-        color: "Calico",
+        color: "Blenheim",
         fixed: "Yes",
-        age: 4,
-        animal_id: 87459,
-        microchip_num: 982000364789224,
-        status: 
+        age: 2,
+        animal_id: 79823,
+        microchip_num: 982000445678901,
+        status:
             [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
+                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Cleo is a beautiful Calico cat with a vibrant coat of orange, black, and white. She's 
-                a gentle and affectionate feline who enjoys lounging in sunny spots and birdwatching from 
-                the windowsill. Cleo is also playful and enjoys chasing toys and exploring her surroundings. 
-                She gets along well with other pets and would make a wonderful companion for any cat lover. 
-                Cleo is looking for a loving home where she can receive all the attention she deserves.`
-
+        about_me: `Say hello to Cassie, a sweet Cavalier King Charles Spaniel with a beautiful blenheim 
+                coat. Cassie is known for her affectionate and gentle nature. She loves cuddling with 
+                her humans and enjoys being carried around like a baby. Cassie is also great with 
+                children and other pets, making her an ideal family companion. She's looking for a 
+                loving home where she can receive plenty of attention and affection from her new family.`
+        
     },
     {
         name: "Zoe",
