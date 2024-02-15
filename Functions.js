@@ -24,21 +24,20 @@ async function pet_card() {
                 sex = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"/></svg>`
             }
-            // <button class="btn btn-primary" onclick="showModal(${i})">More information</button>
-            //<a href="detail.html?id=${i}" class="btn btn-primary">Details on ${pets[i].name}...</a>
             let htmlSegment = `
                 <div class="col-lg-4 col-sm-12" data-index="${i}">
                     <div class="card" style="width: 18rem;">
                         <img src="${pets[i].image}" class="card-img-top" alt="Image of ${pets[i].name}">
                         <div class="card-body">
                             <h5 class="card-title">${pets[i].name}</h5>
-                            <div>${sex}${age}</div><br />                                
+                            <div>${sex}${age}</div><br />
+                            <button class="btn btn-primary" id="btn-edit-pet">Edit Pet</button>
                         </div>
                     </div>
                 </div>`;
                 html += htmlSegment;
         };
-        document.getElementById("pet_container").innerHTML += html;
+        document.getElementById("pet_container").innerHTML = html;
 
     } catch (error) {
         console.error("Error while processing pet data:", error);
@@ -119,4 +118,5 @@ function showModal(pet_index){
     document.getElementById("status_pet").innerHTML = `<span class="label">Satus</span>: ${pets[pet_index].status},`;
     document.getElementById("go_to_details_page").href = `detail.html?id=${pet_index}`;
 }
+
 

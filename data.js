@@ -1,6 +1,6 @@
 var offset = 0;
 var rpp = 9;
-let pets = [
+var pets = [
     {
         name: "Baxter",
         type: "Dog",
@@ -16,12 +16,7 @@ let pets = [
             [
                 "Health checked.", "Vaccinations up to date.", "Regularly dewormed.",  "Microchipped."
             ],
-        about_me: `Meet Baxter, a lovable Beagle with a knack for sniffing out fun! Baxter was
-                rescued from a shelter and has blossomed into a friendly and outgoing boy. He
-                loves long walks and has a keen sense of smell. He's great with kids and other
-                dogs, making him the perfect family pet. His favorite pastime is chasing squirrels
-                in the park and curling up for naps. Baxter is looking for a loving home where he
-                can share his endless affection and playful spirit.`
+        about_me: `Meet Baxter, a lovable Beagle with a knack for sniffing out fun! Baxter was rescued from a shelter and has blossomed into a friendly and outgoing boy. He loves long walks and has a keen sense of smell. He's great with kids and other dogs, making him the perfect family pet. His favorite pastime is chasing squirrels in the park and curling up for naps. Baxter is looking for a loving home where he can share his endless affection and playful spirit.`
     },
     {
         name: "Teddy",
