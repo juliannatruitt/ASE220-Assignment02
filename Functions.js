@@ -37,7 +37,7 @@ async function pet_card() {
                 </div>`;
                 html += htmlSegment;
         };
-        document.getElementById("pet_container").innerHTML = html;
+        document.getElementById("pet_container").innerHTML += html;
 
     } catch (error) {
         console.error("Error while processing pet data:", error);
