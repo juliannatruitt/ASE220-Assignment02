@@ -74,7 +74,7 @@
 		<div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="pet_name"></h5>
+                <h5 class="modal-title" id="edit_pet_name"></h5>
             </div>
             <div class="modal-body" id="edit-modal_body">
 				<form>
@@ -95,7 +95,10 @@
 							<option value="No">No</option></p></select>
 						</li>
 						<li><p>Age: <input type="text" name="age"></input></p></li>
-						<li><p>Status:</p></p><p id="status"></p><div class="text-end"><button id="add_another_status" class="btn btn-sm btn-primary">+</button></div></li>
+						<li><p>Status:</p></p><p id="status"></p>
+							<div class="text-end">
+								<button id="add_another_status" class="btn btn-sm btn-primary">+</button>
+							</div></li>
 					</ul>
 				</form>
             </div>
@@ -137,7 +140,7 @@
 			$(document).on('click','#pet_container .card', function(){
 				if (!editIsOpened){
 					const card = $(this).parent().data('index');	
-					if (card != null | undefined){
+					if (card !== null && card !== undefined){
 						showModal(card);
 						$('#modal').modal('show');
 					}
@@ -150,7 +153,7 @@
 				editIsOpened = false;
 			});
 
-			$(document).on('click', '#pet_container #btn-edit-pet', function(){
+			$(document).on('click', '#pet_container #btn-edit-pet', function(event){
 				event.stopPropagation();
 				editIsOpened = true;
 				index_num = $(this).parent().parent().parent().data('index');
@@ -163,19 +166,23 @@
 				
 				$('#status').empty();
 				for(let i=0; i<pets[index_num].status.length; i++){
-					$('#status').append(`<input type="text" id=${i} value="${pets[index_num].status[i]}"/>`);
+					$('#status').append(`<input type="text" id="status-${i}" value="${pets[index_num].status[i]}"/>
+											<button class="delete_a_status btn btn-sm btn-primary">-</button>`);
 				}
 				$('#edit-modal').modal('show');
 			});
 
 			$(document).on('click','#btn-save-changes', function(){
-				if (index_num !== 'undefined' && index_num !== null){
+				if (index_num !== undefined && index_num !== null){
 					pets[index_num].name = $("input[name='name']").val();
 					pets[index_num].type = $("#type").val();
 					pets[index_num].breed = $("input[name='breed']").val();
 					pets[index_num].sex = $("#sex").val();
 					pets[index_num].fixed = $("#fixed").val();
 					pets[index_num].age = $("input[name='age']").val();
+					for (let i=0; i < pets[index_num].status.length; i++ ){
+						pets[index_num].status[i] = $(`#status-${i}`).val();
+					}
 
 					updateCard(index_num);
 
@@ -184,6 +191,24 @@
 				}
 			});
 
+			$(document).on('click', '#add_another_status', function(event){
+				let i = pets[index_num].status.length;
+				event.stopPropagation();
+				event.preventDefault();
+				let newStatusInput = $(`<input type="text" id="status-${i}" />
+										<button class="delete_a_status btn btn-sm btn-primary">-</button>`);
+				$('#status').append(newStatusInput);
+				pets[index_num].status.push(newStatusInput.val());
+			});
+
+			$(document).on('click', '.delete_a_status', function(event){
+				event.stopPropagation();
+				event.preventDefault();
+				$(this).prev().remove();
+				$(this).remove();
+			});
+
+		
 		});
 	</script>
 </body>

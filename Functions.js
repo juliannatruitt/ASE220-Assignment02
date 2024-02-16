@@ -31,7 +31,7 @@ async function pet_card() {
                         <div class="card-body">
                             <h5 class="card-title">${pets[i].name}</h5>
                             <div>${sex}${age}</div><br />
-                            <button class="btn btn-primary" id="btn-edit-pet">Edit Pet</button>
+                            <button class="btn btn-small btn-primary" id="btn-edit-pet">Edit Pet</button>
                         </div>
                     </div>
                 </div>`;
