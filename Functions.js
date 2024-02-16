@@ -113,10 +113,35 @@ function showModal(pet_index){
     document.getElementById("pet_name").innerHTML = pets[pet_index].name
     document.getElementById("description_pet").innerHTML = `${pets[pet_index].name}, a ${pets[pet_index].breed} ${pets[pet_index].type}. 
                                                             ${pets[pet_index].age} years old with ${pets[pet_index].color} fur.`;
+    document.getElementById("pet_type").innerHTML = `<span class="label">Type</span>: ${pets[pet_index].type}`;                                                       
     document.getElementById("pet_sex").innerHTML = `<span class="label">Sex</span>: ${pets[pet_index].sex}`;
+    document.getElementById("pet_breed").innerHTML = `<span class="label">Breed</span>: ${pets[pet_index].breed}`;
     document.getElementById("spayed_or_neutered_pet").innerHTML = `<span class="label">Spayed/Neutered</span>: ${pets[pet_index].fixed}`;
+    document.getElementById("pet_age").innerHTML = `<span class="label">Age</span>: ${pets[pet_index].age}`;
     document.getElementById("status_pet").innerHTML = `<span class="label">Satus</span>: ${pets[pet_index].status},`;
     document.getElementById("go_to_details_page").href = `detail.html?id=${pet_index}`;
+}
+
+function updateCard(index) {
+    let cardElement = document.querySelector(`[data-index="${index}"] .card`);
+    if (cardElement) {
+        let age = block_number_icons[pets[index].age];
+        let sex = (pets[index].sex == "Male") ?
+            `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></svg>` :
+            `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"/></svg>`;
+
+        let htmlContent = `
+            <img src="${pets[index].image}" class="card-img-top" alt="Image of ${pets[index].name}">
+            <div class="card-body">
+                <h5 class="card-title">${pets[index].name}</h5>
+                <div>${sex}${age}</div><br />
+                <button class="btn btn-primary btn-edit-pet" data-index="${index}">Edit Pet</button>
+            </div>`;
+
+        cardElement.innerHTML = htmlContent;
+    }
 }
 
 

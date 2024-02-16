@@ -49,8 +49,11 @@
             <div class="modal-body" id="modal_body">
                 <ul>
 					<li id="description_pet"><p></p></li>
+					<li id="pet_type"><p></p></li>
+					<li id="pet_breed"><p></p></li>
                     <li id="pet_sex"><p></p></li>
                     <li id="spayed_or_neutered_pet"><p></p></li>
+					<li id="pet_age"><p></p></li>
                     <li id="status_pet"><p></p></li>
                 </ul>
             </div>
@@ -87,17 +90,12 @@
 							<option value="Female">Female</option>
 							<option value="Male">Male</option></p></select>
 						</li>
-						<li><p>Color: <input type="text" name="color"></input></p></li>
 						<li><p>Spayed/Neutered: <select name="fixed" id="fixed">
 							<option value="Yes">Yes</option>
 							<option value="No">No</option></p></select>
 						</li>
 						<li><p>Age: <input type="text" name="age"></input></p></li>
-						<li><p>Animal ID: <input type="text" name="animal_id"></input></p></li>
-						<li><p>Microchip Number: <input type="text" name="microchip_number"></input></p></li>
-						<li><p id="status"></p></li>
-						<!--<input type="text" id="status"> -->
-						<li><p>About me: <textarea id="about_me" style="height: 300px; width: 400px;"></textarea></p></li>
+						<li><p>Status:</p></p><p id="status"></p><div class="text-end"><button id="add_another_status" class="btn btn-sm btn-primary">+</button></div></li>
 					</ul>
 				</form>
             </div>
@@ -156,40 +154,36 @@
 				event.stopPropagation();
 				editIsOpened = true;
 				index_num = $(this).parent().parent().parent().data('index');
-				console.log(pets[index_num].name);
 				$("input[name='name']").val(pets[index_num].name);
 				$("#type").val(pets[index_num].type);
 				$("input[name='breed']").val(pets[index_num].breed);
 				$("#sex").val(pets[index_num].sex);
-				$("input[name='color']").val(pets[index_num].color);
 				$("#fixed").val(pets[index_num].fixed);
 				$("input[name='age']").val(pets[index_num].age);
-				$("input[name='animal_id']").val(pets[index_num].animal_id);
-				$("input[name='microchip_number']").val(pets[index_num].microchip_num);
-				$("#about_me").val(pets[index_num].about_me);
+				
+				$('#status').empty();
+				for(let i=0; i<pets[index_num].status.length; i++){
+					$('#status').append(`<input type="text" id=${i} value="${pets[index_num].status[i]}"/>`);
+				}
 				$('#edit-modal').modal('show');
 			});
 
 			$(document).on('click','#btn-save-changes', function(){
 				if (index_num !== 'undefined' && index_num !== null){
-					console.log(pets[index_num].name)
-					console.log($("input[name='name']").val())
 					pets[index_num].name = $("input[name='name']").val();
 					pets[index_num].type = $("#type").val();
 					pets[index_num].breed = $("input[name='breed']").val();
 					pets[index_num].sex = $("#sex").val();
-					pets[index_num].color = $("input[name='color']").val();
 					pets[index_num].fixed = $("#fixed").val();
 					pets[index_num].age = $("input[name='age']").val();
-					console.log(pets[index_num].name)
-					//pets[index_num].sex = $("input[name='fixed']").val();
+
+					updateCard(index_num);
 
 					$('#edit-modal').modal('hide');
 					editIsOpened = false;
-					console.log($(`.card-container[data-index="${index_num}"] .card`).text());
-					
 				}
 			});
+
 		});
 	</script>
 </body>
