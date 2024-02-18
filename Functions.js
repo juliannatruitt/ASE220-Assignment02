@@ -10,7 +10,7 @@ async function load_file(url) {
 
 const file_url = "data.js";
 
-async function pet_card() {
+async function pet_card(pet) {
     try {
         let html = '';
         for (let i=offset; i < Math.min(offset+rpp, pets.length); i++){
@@ -32,13 +32,13 @@ async function pet_card() {
                             <h5 class="card-title">${pets[i].name}</h5>
                             <div>${sex}${age}</div><br />
                             <button class="btn btn-small btn-primary" id="btn-edit-pet">Edit Pet</button>
+                            <button class="btn btn-sm btn-danger" data-index="$(i)">Delete</button>
                         </div>
                     </div>
                 </div>`;
                 html += htmlSegment;
         };
         document.getElementById("pet_container").innerHTML += html;
-
     } catch (error) {
         console.error("Error while processing pet data:", error);
     }
@@ -143,5 +143,3 @@ function updateCard(index) {
         cardElement.innerHTML = htmlContent;
     }
 }
-
-
