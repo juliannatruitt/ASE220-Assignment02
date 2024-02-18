@@ -138,6 +138,7 @@ function updateCard(index) {
                 <h5 class="card-title">${pets[index].name}</h5>
                 <div>${sex}${age}</div><br />
                 <button class="btn btn-primary btn-edit-pet" data-index="${index}">Edit Pet</button>
+                <button class="btn btn-sm btn-danger" data-index="${index}">Delete</button>
             </div>`;
 
         cardElement.innerHTML = htmlContent;
