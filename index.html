@@ -27,12 +27,51 @@
 		.card-img-top{
 			height: auto;
 		}
+
+		.btn-primary-add{
+			background-color: blue;
+		}
 	</style>
 </head>
 <body>
 	<h1 style="float: none; position: relative; text-align: center; color: black;">
 		Available Pets
 	</h1>
+	<div id="new-pet" class="new-pet-container">
+			<input type="text" name="name" class="form-control"  placeholder="Name of the pet" />
+			<select name="type" class="form-control" placeholder="Type of pet">
+				<option value="Dog">Dog</option>
+				<option value="Cat">Cat</option>
+				<option value="Other">Other</option></select>
+			<input type="file" name="image" class="form-control" placeholder="Image of the pet"/>
+			<input type="text" name="breed" class="form-control" placeholder="Breed of the pet"/>
+			<select name="sex" class="form-control" placeholder="Sex of the pet">
+				<option value="Female">Female</option>
+				<option value="Male">Male</option></select>
+			<input type="text" name="color" class="form-control" placeholder="Color of the pet"/>
+			<select name="fixed" class="form-control" placeholder="Fixed status of the pet">
+				<option value="Yes">Yes</option>
+				<option value="No">No</option></select>
+			<!-- <input type="text" name="age" class="form-control" placeholder="Age of the pet"/>
+			<input type="text" name="animal_id" class="form-control" placeholder="Animal id of the pet"/>
+			<input type="text" name="microchip_num" class="form-control" placeholder="Microchip number of the pet"/>
+			<input type="checkbox" name="status" value="Health" class="form-check-input" id="status-health">
+			<label class="form-check-label" for="status-health">Health checked</label><br>
+			<input type="checkbox" name="status" value="Vaccinations" class="form-check-input" id="status-vaccinations">
+			<label class="form-check-label" for="status-vaccinations">Vaccinations up to date</label><br>
+			<input type="checkbox" name="status" value="Wormed" class="form-check-input" id="status-worms">
+			<label class="form-check-label" for="status-womrs">Regularly dewormed</label><br>
+			<input type="checkbox" name="status" value="Chipped" class="form-check-input" id="status-check">
+			<label class="form-check-label" for="status-check">Microchipped</label><br>
+			<input type="checkbox" name="status" value="Unhealth" class="form-check-input" id="status-unhealth">
+			<label class="form-check-label" for="status-unhealth">Health not checked</label><br>
+			<input type="checkbox" name="status" value="Vaccination" class="form-check-input" id="status-vaccination">
+			<label class="form-check-label" for="status-vaccination">Vaccinations not up to date</label><br> -->
+			<textarea name="status" class="form-control" placeholder="Status of the pet"></textarea>
+			<textarea name="about_me" class="form-control" placeholder="More details of the pet"></textarea>
+		<button class="btn btn-primary-add">Add a new pet</button>
+
+	</div>
 	<div class="container">
 		<div class="row" id="pet_container">	
 		</div>
@@ -208,6 +247,32 @@
 				$(this).remove();
 			});
 
+			$(document).on('click','.btn-primary-add',function(){
+				// let selectedStatus=[];
+				// $('input[name="status"]:checked').each(function() {
+        		// 	selectedStatus.push($(this).val());
+    			// });
+				
+				let pet={
+                    name:$('[name=name]').val(),
+                    type:$('[name=type]').val(),
+					image:$('[name=image]').val(),
+                    breed:$('[name=breed]').val(),
+					sex:$('[name=sex]').val(),
+                    color:$('[name=color]').val(),
+					fixed:$('[name=fixed]').val(),
+                    age:$('[name=age]').val(),
+					animal_id:$('[name=animal_id]').val(),
+                    microchip_num:$('[name=microchip_num]').val(),
+					status:$('[name=status]').val(),
+                    about_me:$('[name=about_me]').val()
+                    }
+
+					
+                    pets.push(pet);
+					pet_card(pet);
+					console.log(pet);
+                });
 		
 		});
 	</script>
