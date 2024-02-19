@@ -194,7 +194,7 @@
 				editIsOpened = false;
 			});
 
-			$(document).on('click', '#pet_container #btn-edit-pet', function(event){
+			$(document).on('click', '.btn-edit-pet', function(event){
 				event.stopPropagation();
 				editIsOpened = true;
 				index_num = $(this).parent().parent().parent().data('index');
@@ -279,11 +279,12 @@
 		
 		});
 
-		$(document).on('click', '.btn-danger', function() {
+		$(document).on('click', '.btn-danger', function(event) {
 			event.stopPropagation();
+			console.log($(this))
 			const index = parseInt($(this).attr('data-index'));
 			console.log(index);
-			pets.splice(index, 1);
+			pets[index]={};
 			console.log(pets);
 			$(this).closest('.col-lg-4').remove();
 		});
