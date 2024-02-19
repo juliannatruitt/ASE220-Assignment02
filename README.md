@@ -6,4 +6,4 @@
 - Isha Nepal
     - I worked on adding more pets and images to our file and some CSS.
 - Garrett Kinder
-    I worked on the view more pets button and some additional CSS formatting.
+    Added the delete button and helped with edits to other codes.
