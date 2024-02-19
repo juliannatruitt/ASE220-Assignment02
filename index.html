@@ -279,6 +279,7 @@
 		});
 
 		$(document).on('click', '.btn-danger', function() {
+			event.stopPropagation();
 			const index = parseInt($(this).attr('data-index'));
 			console.log(index);
 			pets.splice(index, 1);
