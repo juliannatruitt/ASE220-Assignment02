@@ -119,13 +119,13 @@
             <div class="modal-body" id="edit-modal_body">
 				<form>
 					<ul class="list-group" id="edit_pet_list">
-						<li><p>Name: <input type="text" name="name"></input></p></li>
+						<li><p>Name: <input type="text" id="name"></input></p></li>
 						<li><p>Type: <select name="type" id="type">
 							<option value="Dog">Dog</option>
 							<option value="Cat">Cat</option>
 							<option value="Other">Other</option></p></select>
 						</li>
-						<li><p>Breed: <input type="text" name="breed"></input></p></li>
+						<li><p>Breed: <input type="text" id="breed"></input></p></li>
 						<li><p>Sex: <select name="sex" id="sex">
 							<option value="Female">Female</option>
 							<option value="Male">Male</option></p></select>
@@ -134,7 +134,7 @@
 							<option value="Yes">Yes</option>
 							<option value="No">No</option></p></select>
 						</li>
-						<li><p>Age: <input type="text" name="age"></input></p></li>
+						<li><p>Age: <input type="text" id="age"></input></p></li>
 						<li><p>Status:</p></p><p id="status"></p>
 							<div class="text-end">
 								<button id="add_another_status" class="btn btn-sm btn-primary">+</button>
@@ -198,12 +198,13 @@
 				event.stopPropagation();
 				editIsOpened = true;
 				index_num = $(this).parent().parent().parent().data('index');
-				$("input[name='name']").val(pets[index_num].name);
+				$("#name").val(pets[index_num].name);
 				$("#type").val(pets[index_num].type);
-				$("input[name='breed']").val(pets[index_num].breed);
+				$("#breed").val(pets[index_num].breed);
 				$("#sex").val(pets[index_num].sex);
 				$("#fixed").val(pets[index_num].fixed);
-				$("input[name='age']").val(pets[index_num].age);
+				$("#age").val(pets[index_num].age);
+				console.log($("input[name='name']").val());
 				
 				$('#status').empty();
 				for(let i=0; i<pets[index_num].status.length; i++){
@@ -215,12 +216,12 @@
 
 			$(document).on('click','#btn-save-changes', function(){
 				if (index_num !== undefined && index_num !== null){
-					pets[index_num].name = $("input[name='name']").val();
+					pets[index_num].name = $("#name").val();
 					pets[index_num].type = $("#type").val();
-					pets[index_num].breed = $("input[name='breed']").val();
+					pets[index_num].breed = $("#breed").val();
 					pets[index_num].sex = $("#sex").val();
 					pets[index_num].fixed = $("#fixed").val();
-					pets[index_num].age = $("input[name='age']").val();
+					pets[index_num].age = $("#age").val();
 					for (let i=0; i < pets[index_num].status.length; i++ ){
 						pets[index_num].status[i] = $(`#status-${i}`).val();
 					}
@@ -279,7 +280,6 @@
 		});
 
 		$(document).on('click', '.btn-danger', function() {
-			event.stopPropagation();
 			const index = parseInt($(this).attr('data-index'));
 			console.log(index);
 			pets.splice(index, 1);
