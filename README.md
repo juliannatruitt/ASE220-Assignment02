@@ -6,4 +6,4 @@
 - Isha Nepal
     - I worked on adding add a new pet button and adding new pet to the list.
 - Garrett Kinder
-    I worked on the view more pets button and some additional CSS formatting.
+    Added the delete button and helped with edits to other codes.
