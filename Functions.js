@@ -10,35 +10,33 @@ async function load_file(url) {
 
 const file_url = "data.js";
 
-async function pet_card(pet) {
+async function pet_card(pet, index) {
     try {
         let html = '';
-        for (let i=offset; i < Math.min(offset+rpp, pets.length); i++){
-            let age = block_number_icons[pets[i].age]
-            let sex = '';
-            if (pets[i].sex == "Male"){
-                sex = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+        let age = block_number_icons[pet.age]
+        let sex = '';
+        if (pet.sex == "Male"){
+            sex = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></svg>`
-            }
-            else {
-                sex = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+        }
+        else {
+            sex = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"/></svg>`
-            }
-            let htmlSegment = `
-                <div class="col-lg-4 col-sm-12" data-index="${i}">
-                    <div class="card" style="width: 18rem;">
-                        <img src="${pets[i].image}" class="card-img-top" alt="Image of ${pets[i].name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${pets[i].name}</h5>
-                            <div>${sex}${age}</div><br />
-                            <button class="btn btn-small btn-primary btn-edit-pet">Edit Pet</button>
-                            <button class="btn btn-sm btn-danger" data-index="${i}">Delete</button>
-                        </div>
+        }
+        let htmlSegment = `
+            <div class="col-lg-4 col-sm-12" data-index="${index}">
+                <div class="card" style="width: 18rem;">
+                    <img src="${pet.image}" class="card-img-top" alt="Image of ${pet.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${pet.name}</h5>
+                        <div>${sex}${age}</div><br />
+                        <button class="btn btn-small btn-primary btn-edit-pet">Edit Pet</button>
+                        <button class="btn btn-sm btn-danger" data-index="${index}">Delete</button>
                     </div>
-                </div>`;
-                html += htmlSegment;
-        };
-        document.getElementById("pet_container").innerHTML += html;
+                </div>
+            </div>`;
+
+        document.getElementById("pet_container").innerHTML += htmlSegment;
     } catch (error) {
         console.error("Error while processing pet data:", error);
     }
