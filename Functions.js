@@ -40,7 +40,7 @@ async function pet_card(pet, index) {
     } catch (error) {
         console.error("Error while processing pet data:", error);
     }
-    if (offset+rpp > pets.length) more_pets.hidden = true;
+    if (offset+rpp > petarray.length) more_pets.hidden = true;
 }
 
 function createButton(text, classList, clickHandler, appendTo) {
