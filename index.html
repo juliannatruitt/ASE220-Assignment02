@@ -171,17 +171,6 @@
       		});
 		});
 
-		/*$("button").click(function(){
-		axios.get('https://jsonblob.com/api/1077273732883693568',{})
-		.then(function (response) {
-			console.log(response);
-		})
-		.catch(function (error) {
-			console.log(error);
-		});
-
-		});*/
-
 		let more_pets = document.createElement('button');
 		more_pets.classList.add('btn');
 		more_pets.classList.add('btn-primary');
@@ -342,6 +331,21 @@
 
 		$(document).on('click', '.btn-danger', function(event) {
 			event.stopPropagation();
+			$.ajax9({
+				type: "DELETE",
+				url: "https://jsonblob.com/api/jsonBlob/1211400843529412608",
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function(xhr,data,response){
+					console.log(xhr);
+					console.log(data);
+					console.log(response);
+					console.log(response.getAllResponseHeaders());
+				},
+				error: function(errMsg) {
+					console.log(errMsg);
+				}
+			});
 			console.log($(this))
 			const index = parseInt($(this).attr('data-index'));
 			console.log(index);
@@ -349,6 +353,24 @@
 			console.log(pets);
 			$(this).closest('.col-lg-4').remove();
 		});
+
+		/*$("button").click(function(){
+			$.ajax({
+				type: "DELETE",
+				url: "https://jsonblob.com/api/jsonBlob/1077296012858769408",
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function(xhr,data,response){
+					console.log(xhr);
+					console.log(data);
+					console.log(response);
+					console.log(response.getAllResponseHeaders());
+				},
+				error: function(errMsg) {
+					console.log(errMsg);
+				}
+			});
+		});*/
 	</script>
 </body>
 </html>
