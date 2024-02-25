@@ -693,73 +693,8 @@ var pets = [
                 loving home where she can receive plenty of attention and affection from her new family.`
         
     },
-    {
-        name: "Zoe",
-        type: "Cat",
-        image: "images/sphynx_zoe.jpg",
-        breed: "Sphynx",
-        sex: "Female",
-        color: "Pink",
-        fixed: "Yes",
-        age: 1,
-        animal_id: 74562,
-        microchip_num: 982000364789228,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Zoe is a unique Sphynx cat with a soft pink skin and a charming personality. She's a 
-                playful and affectionate feline who enjoys cuddling up with her humans for warmth and 
-                companionship. Zoe is also curious and enjoys exploring her surroundings, often finding 
-                creative ways to entertain herself. She gets along well with other pets and would make a 
-                wonderful addition to any loving family. Zoe is looking for a forever home where she can 
-                receive all the love and attention she deserves.`
-
-    },
-    {
-        name: "Willow",
-        type: "Cat",
-        image: "images/russian_blue_willow.jpg",
-        breed: "Russian Blue",
-        sex: "Female",
-        color: "Blue",
-        fixed: "Yes",
-        age: 2,
-        animal_id: 89654,
-        microchip_num: 982000364789226,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Willow is a graceful Russian Blue cat with a sleek blue coat and bright green eyes. She's an 
-                independent and sophisticated feline who enjoys her alone time but also loves being near her 
-                favorite humans. Willow is curious and enjoys exploring her environment, especially if there are 
-                high perches to climb. She's not overly demanding for attention but appreciates affection on her 
-                terms. Willow would be a perfect companion for someone seeking a low-maintenance yet affectionate cat.`
-
-    },
-    {
-        name: "Rusty",
-        type: "Dog",
-        image: "images/dalmatian_rusty.jpg",
-        breed: "Dalmatian",
-        sex: "Male",
-        color: "Liver spotted",
-        fixed: "Yes",
-        age: 2,
-        animal_id: 63524,
-        microchip_num: 982000364789229,
-        status: 
-            [
-                "Health checked.", "Vaccinations up to date.", "Regularly dewormed.", "Microchipped."
-            ],
-        about_me: `Rusty is a playful Dalmatian with a liver-spotted coat and a boundless zest for life. He's a 
-                high-energy dog who loves nothing more than running and playing outdoors. Rusty is also intelligent 
-                and eager to please, making him a joy to train. He gets along well with children and other pets, 
-                making him an excellent family companion. Rusty is looking for an active household where he can 
-                receive plenty of exercise and attention.`
-
-    },
+    
+    
 ]
 
 //0-9 
