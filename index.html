@@ -278,11 +278,12 @@
 			});
 
 			$(document).on('click','.btn-primary-add',function(){
+				try{
 				// let selectedStatus=[];
 				// $('input[name="status"]:checked').each(function() {
         		// 	selectedStatus.push($(this).val());
     			// });
-				
+
 				let pet={
                     name:$('[name=name]').val(),
                     type:$('[name=type]').val(),
@@ -296,12 +297,36 @@
                     microchip_num:$('[name=microchip_num]').val(),
 					status:$('[name=status]').val(),
                     about_me:$('[name=about_me]').val()
-                    }
-
+                    };
 					
                     pets.push(pet);
-					pet_card(pet);
-					console.log(pet);
+					// pet_card(pet);
+					pet_card(pet, petarray.length);
+					console.log(petarray);
+
+
+					$.ajax({
+					type: "PUT",
+					url: "https://jsonblob.com/api/jsonBlob/1077296012858769408",
+					data: JSON.stringify({}),
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function(xhr,data,response){
+						console.log(xhr);
+						console.log(data);
+						console.log(response);
+						console.log(response.getAllResponseHeaders());
+					},
+					error: function(errMsg) {
+						alert(errMsg);
+					}
+				});
+
+					
+				} catch(error){
+					console.error("Error in adding:", error);
+				}
+					
                 });
 		
 		});
