@@ -10,6 +10,9 @@ async function load_file(url) {
 
 const file_url = "data.js";
 
+var offset = 0;
+var rpp = 9;
+
 async function pet_card(pet, index) {
     try {
         let html = '';
