@@ -331,15 +331,17 @@
 
 		$(document).on('click', '.btn-danger', function(event) {
 			event.stopPropagation();
-			/*console.log($(this))
+			console.log($(this))
 			const index = parseInt($(this).attr('data-index'));
 			console.log(index);
-			pets[index]={};
+			petarray.splice(index, 1);
+			/*pets[index]={};
 			console.log(pets);
 			$(this).closest('.col-lg-4').remove();*/
 			$.ajax({
 				type: "PUT",
-				url: "https://jsonblob.com/api/jsonBlob/1211422852544061440",
+				url: "https://jsonblob.com/api/jsonBlob/1211429543851450368",
+				data: JSON.stringify(petarray),
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
 				success: function(xhr,data,response){
