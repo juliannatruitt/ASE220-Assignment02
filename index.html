@@ -333,9 +333,15 @@
 
 		$(document).on('click', '.btn-danger', function(event) {
 			event.stopPropagation();
-			$.ajax9({
-				type: "DELETE",
-				url: "https://jsonblob.com/api/jsonBlob/1211400843529412608",
+			/*console.log($(this))
+			const index = parseInt($(this).attr('data-index'));
+			console.log(index);
+			pets[index]={};
+			console.log(pets);
+			$(this).closest('.col-lg-4').remove();*/
+			$.ajax({
+				type: "PUT",
+				url: "https://jsonblob.com/api/jsonBlob/1211422852544061440",
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
 				success: function(xhr,data,response){
@@ -348,12 +354,6 @@
 					console.log(errMsg);
 				}
 			});
-			console.log($(this))
-			const index = parseInt($(this).attr('data-index'));
-			console.log(index);
-			pets[index]={};
-			console.log(pets);
-			$(this).closest('.col-lg-4').remove();
 		});
 
 		/*$("button").click(function(){
