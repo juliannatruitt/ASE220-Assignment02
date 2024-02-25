@@ -224,7 +224,6 @@
 				$("#sex").val(petarray[index_num].sex);
 				$("#fixed").val(petarray[index_num].fixed);
 				$("#age").val(petarray[index_num].age);
-				console.log($("input[name='name']").val());
 				
 				$('#status').empty();
 				for(let i=0; i<petarray[index_num].status.length; i++){
@@ -247,12 +246,11 @@
 					}
 
 					updateCard(index_num);
-					console.log(petarray[0]);
 
 					$.ajax({
 					type: "PUT",
-					url: "https://jsonblob.com/api/jsonBlob/1077296012858769408",
-					data: JSON.stringify({"content":"here"}),
+					url: document_url,
+					data: JSON.stringify(petarray),
 					contentType: "application/json; charset=utf-8",
 					dataType: "json",
 					success: function(xhr,data,response){
