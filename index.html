@@ -336,11 +336,11 @@
 			console.log(index);
 			petarray.splice(index, 1);
 			/*pets[index]={};
-			console.log(pets);
-			$(this).closest('.col-lg-4').remove();*/
+			console.log(pets);*/
+			$(this).closest('.col-lg-4').remove();
 			$.ajax({
 				type: "PUT",
-				url: "https://jsonblob.com/api/jsonBlob/1211429543851450368",
+				url: document_url,
 				data: JSON.stringify(petarray),
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
